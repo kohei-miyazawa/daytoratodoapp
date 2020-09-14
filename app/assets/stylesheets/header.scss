@@ -1,14 +1,14 @@
 @import 'variables';
 
-$avatar-size: 40px;
-$header-padding-y: 16px;
+$avatar-size: 30px;
+$header-padding-y: 8px;
 
 .header {
   display: flex;
   justify-content: space-between;
   background-color: none;
   padding: $header-padding-y 16px;
-  font-weight: bold;
+  border-bottom: 1px solid #dcdcdc;
 
   &_pageTitle {
     color: black;
