@@ -6,14 +6,15 @@ $header-padding-y: 16px;
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: $primary-color;
+  background-color: none;
   padding: $header-padding-y 16px;
   font-weight: bold;
 
   &_pageTitle {
-    color: white;
+    color: black;
     line-height: $avatar-size;
     font-size: $font-lg;
+    font-weight: lighter;
   }
 
   &_avatar {
