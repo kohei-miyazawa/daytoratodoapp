@@ -1,2 +1,15 @@
-%h1 Boards#edit
-%p Find me in app/views/boards/edit.html.erb
+.container
+  %ul
+    - @board.errors.full_messages.each do |message|
+      %li= message
+  %h2 Edit Board
+  = form_with(model: @board, url: board_path(@board), method: 'patch', local: true) do |f|
+    %div
+      = f.label :name, 'Name'
+    %div
+      = f.text_field :name, class:'text'
+    %div
+      = f.label :description, 'Description'
+    %div
+      = f.text_area :description, class: 'text'
+    = f.submit 'Submit', class: 'btn-primary'
