@@ -3,12 +3,11 @@
   - @boards.each do |board|
     = link_to board_path(board) do
       .board
-        .board_content
-          .board_name
-            = board.name
-          .board_description
-            = board.description
-          .board_icon
+        .board_name
+          = board.name
+        .board_description
+          = board.description
+        .board_icon
           = image_tag 'default-avatar.png', class: 'board_avatar'
           - if user_signed_in? && current_user.has_created?(board)
             .dropdown

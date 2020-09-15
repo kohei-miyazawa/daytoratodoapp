@@ -5,6 +5,11 @@ class BoardsController < ApplicationController
     @boards = Board.all.order(updated_at: :desc)
   end
 
+  def show
+    @board = Board.find(params[:id])
+    @tasks = @board.tasks
+  end
+
   def new
     @board = current_user.boards.build
   end

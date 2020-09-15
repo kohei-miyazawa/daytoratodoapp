@@ -2,7 +2,7 @@ $board-color:#F4F4F4;
 
 /* Boardリンク */
 
-.board{
+.task{
   margin:30px 0;
   height:161px;
   background-color:$board-color;
@@ -10,7 +10,7 @@ $board-color:#F4F4F4;
   border-radius:10px;
   position: relative;
 
-  .board_name{
+  .task_title{
     position: absolute;
     top: 22px;
     left: 17px;
@@ -22,7 +22,7 @@ $board-color:#F4F4F4;
     line-height: 25px;
   }
 
-  .board_description{
+  .task_content{
     position: absolute;
     top: 63px;
     left:17px;
@@ -34,16 +34,7 @@ $board-color:#F4F4F4;
     opacity:0.4;
   }
 
-  .dropdown{
-    position: absolute;
-    right: 30px;
-    top: 22px;
-    .dropbtn {
-      width : 20px;
-    }
-  }
-
-  .board_avatar{
+  .task_avatar{
     position: absolute;
     width: 30px;
     height: 30px;
@@ -56,13 +47,13 @@ $board-color:#F4F4F4;
 
 /* 新規追加リンク */
 
-.add_board{
+.add_task{
   margin:30px 0;
   border:1px dashed rgba(0,0,0,.2);
   border-radius:10px;
 
 
-  .add_board_content{
+  .add_task_content{
     display:block;
     text-align: center;
     line-height:161px;
