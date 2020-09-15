@@ -1,3 +1,76 @@
-// Place all the styles related to the Boards controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+$board-color:#F4F4F4;
+
+/* Boardリンク */
+
+.board{
+  margin:30px 0;
+  height:161px;
+  background-color:$board-color;
+  border:1px solid rgba(0,0,0,.1);
+  border-radius:10px;
+
+  .board_content{
+    position: relative;
+
+    .board_name{
+      position: absolute;
+      top: 22px;
+      left: 17px;
+      font-family: Avenir;
+      font-weight: bold;
+      color: black;
+      font-style: normal;
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    .board_description{
+      position: absolute;
+      top: 63px;
+      left:17px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      color: black;
+      line-height: 19px;
+      opacity:0.4;
+    }
+
+    .dropdown{
+      position: absolute;
+      right: 30px;
+      top: 22px;
+      .dropbtn {
+        width : 20px;
+      }
+    }
+
+    .board_avatar{
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      left:10px;
+      top: 120px;
+      border-radius:20px;
+
+    }
+  }
+}
+
+
+/* 新規追加リンク */
+
+.add_board{
+  margin:30px 0;
+  border:1px dashed rgba(0,0,0,.2);
+  border-radius:10px;
+
+
+  .add_board_content{
+    display:block;
+    text-align: center;
+    line-height:161px;
+    text-decoration: none;
+    color: black;
+  }
+}
