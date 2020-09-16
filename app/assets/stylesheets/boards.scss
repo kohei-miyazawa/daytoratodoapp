@@ -20,7 +20,7 @@ $board-color:#F4F4F4;
     justify-content: flex-start;
 
     .board_name {
-      color: $text-base-color;
+      color: black;
     }
 
     .board_edit {
@@ -32,7 +32,7 @@ $board-color:#F4F4F4;
     font-weight: normal;
     font-size: 14px;
     line-height: 19px;
-    color: $text-base-color;
+    color: black;
     opacity:0.4;
     padding: 0 20px 30px 20px;
   }

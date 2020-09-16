@@ -4,11 +4,12 @@
       .show_name
         %h2= @task.title
       .show_edit
-        .dropdown
-          = image_tag 'actions.svg', class: 'dropbtn'
-          .dropdown-content
-            = link_to 'Edit', "#"
-            = link_to 'Delete', "#"
+        - if user_signed_in? && current_user.has_written?(@task)
+          .dropdown
+            = image_tag 'actions.svg', class: 'dropbtn'
+            .dropdown-content
+              = link_to 'Edit', edit_board_task_path(@task)
+              = link_to 'Delete', board_task_path(@task), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
     - if @task.eyecatch.attached?
       .show_image
         = image_tag @task.eyecatch
