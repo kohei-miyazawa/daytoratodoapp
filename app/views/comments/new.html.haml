@@ -5,6 +5,7 @@
   %h2 New Comment
   = form_with(model: @comment, url: board_task_comments_path, method: 'post', local: true) do |f|
     = f.hidden_field :task_id, value: @task.id
+    = f.hidden_field :board_id, value: @board.id
     %div
       = f.text_area :body, class: 'text'
     = f.submit 'Submit', class: 'btn-primary'

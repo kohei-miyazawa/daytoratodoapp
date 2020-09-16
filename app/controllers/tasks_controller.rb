@@ -16,7 +16,7 @@ class TasksController < ApplicationController
     @board = Board.find_by(id: params[:board_id])
     @task = current_user.tasks.build(task_params)
     if @task.save
-      redirect_to root_path, notice: 'cardを作成しました'
+      redirect_to board_path(@board), notice: 'cardを作成しました'
     else
       flash.now[:error] = 'cardの作成に失敗しました'
       render :new
@@ -29,10 +29,10 @@ class TasksController < ApplicationController
   end
 
   def update
-    @board = Board.find_by(id: params[:board_id])
+    @board = Board.find_by(id: params[:task][:board_id])
     @task = current_user.tasks.find(params[:id])
     if @task.update(task_params)
-      redirect_to root_path, notice: '更新しました'
+      redirect_to board_task_path(@board, @task), notice: '更新しました'
     else
       flash.now[:error] = '更新できませんでした'
       render :edit
@@ -40,9 +40,10 @@ class TasksController < ApplicationController
   end
 
   def destroy
+    board = Board.find_by(id: params[:board_id])
     task = current_user.tasks.find(params[:id])
     task.destroy!
-    redirect_to root_path, notice: '削除に成功しました'
+    redirect_to board_path(board), notice: '削除に成功しました'
   end
 
   private

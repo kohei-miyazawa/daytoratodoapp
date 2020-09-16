@@ -9,12 +9,13 @@
             = image_tag 'actions.svg', class: 'dropbtn'
             .dropdown-content
               = link_to 'Edit', edit_board_task_path(@board, @task)
-              = link_to 'Delete', board_task_path(@task), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
+              = link_to 'Delete', board_task_path(@board, @task), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
     - if @task.eyecatch.attached?
       .show_image
         = image_tag @task.eyecatch
-    .show_content
-      = @task.content
+    - if @task.content.present?
+      .show_content
+        = @task.content
     .show_comment
       %h2= "Comment"
       - @comments.each do |comment|

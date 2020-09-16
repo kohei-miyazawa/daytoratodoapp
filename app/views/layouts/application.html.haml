@@ -11,7 +11,8 @@
 
   %body
     %header.header
-      %p.header_pageTitle Boards
+      = link_to root_path do
+        %p.header_pageTitle Boards
       - if user_signed_in?
         .dropdown
           = image_tag 'default-avatar.png', class: 'header_avatar dropbtn'
