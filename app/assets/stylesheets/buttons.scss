@@ -8,6 +8,8 @@
   color: white;
   padding: 16px 0;
   font-weight: bold;
+  border-radius:10px;
+
 }
 
 .btn-secondary {
@@ -18,4 +20,8 @@
   color: $primary-color;
   padding: 16px 0;
   font-weight: bold;
+}
+
+.file_field {
+  margin-bottom: 20px;
 }

@@ -1,21 +1,28 @@
+$board-color:#F4F4F4;
+
 input, select {
   &.text {
     width: 100%;
     margin: 8px 0px;
     padding: 16px 24px;
-    border: 1px solid #EBEBEB;
+    background-color:$board-color;
+    border:none;
+    border-radius:10px;
   }
 }
 
 label {
-  font-size: 12px;
+  font-size: 18px;
 }
 
 textarea, trix-editor {
   width: 100%;
   margin: 8px 0px;
   padding: 8px 8px;
-  min-height: 440px;
+  min-height: 203px;
   resize: vertical;
-  border: 1px solid #EBEBEB;
+  background-color:$board-color;
+  border:none;
+  border-radius:10px;
+  margin-bottom: 250px;
 }

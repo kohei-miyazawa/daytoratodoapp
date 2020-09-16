@@ -39,6 +39,33 @@ $text-base-color: black;
     padding: 0 20px 30px 20px;
   }
 
+  &_icon {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+
+
+    .task_comment {
+      margin-left: auto;
+      display: flex;
+
+      .count {
+        margin-right: 10px;
+        color: black;
+        opacity:0.4;
+      }
+
+      .comment_icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
   &_avatar{
     width: 30px;
     height: 30px;

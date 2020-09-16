@@ -11,7 +11,12 @@
         .task_content
           = task.content
         .task_icon
-          = image_tag 'default-avatar.png', class: 'task_avatar'
+          .avatar
+            = image_tag 'default-avatar.png', class: 'task_avatar'
+          .task_comment
+            .count
+              = task.comments.count
+            = image_tag 'comment.svg', class: 'comment_icon'
   - if user_signed_in?
     .add_task
       = link_to("+ Add new card", new_board_task_path(@board), {class: "add_task_content"})
