@@ -1,0 +1,26 @@
+.container
+  .show
+    .show_title
+      .show_name
+        %h2= @task.title
+      .show_edit
+        .dropdown
+          = image_tag 'actions.svg', class: 'dropbtn'
+          .dropdown-content
+            = link_to 'Edit', "#"
+            = link_to 'Delete', "#"
+    - if @task.eyecatch.attached?
+      .show_image
+        = image_tag @task.eyecatch
+    .show_content
+      = @task.content
+    .show_comment
+      %h2= "Comment"
+      .comment_items
+        .comment_avatar
+          = image_tag 'default-avatar.png', class: 'comment_avatar'
+        .comment_sentence
+          %p= "Successful businesses know the importance of building and maintaining good working. Successful businesses know the importanc"
+    - if user_signed_in?
+      .add_comment
+        = link_to("+ Add new comment", "#", {class: "add_comment_content"})
