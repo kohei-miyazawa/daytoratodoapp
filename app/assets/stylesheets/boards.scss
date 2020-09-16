@@ -4,52 +4,51 @@ $board-color:#F4F4F4;
 
 .board{
   margin:30px 0;
-  height:161px;
   background-color:$board-color;
   border:1px solid rgba(0,0,0,.1);
   border-radius:10px;
-  position: relative;
 
-  .board_name{
-    position: absolute;
-    top: 22px;
-    left: 17px;
-    font-family: Avenir;
+
+  &_title{
     font-weight: bold;
-    color: black;
-    font-style: normal;
     font-size: 18px;
     line-height: 25px;
+    padding: 30px 20px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+
+    .board_name {
+      color: $text-base-color;
+    }
+
+    .board_edit {
+      margin-left: auto;
+    }
   }
 
-  .board_description{
-    position: absolute;
-    top: 63px;
-    left:17px;
-    font-style: normal;
+  &_description{
     font-weight: normal;
     font-size: 14px;
-    color: black;
     line-height: 19px;
+    color: $text-base-color;
     opacity:0.4;
+    padding: 0 20px 30px 20px;
   }
 
   .dropdown{
-    position: absolute;
-    right: 30px;
-    top: 22px;
     .dropbtn {
       width : 20px;
     }
   }
 
-  .board_avatar{
-    position: absolute;
+  &_avatar{
     width: 30px;
     height: 30px;
-    left:10px;
-    top: 120px;
     border-radius:20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
   }
 }
 

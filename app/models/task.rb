@@ -21,6 +21,9 @@
 #  fk_rails_...  (user_id => users.id)
 #
 class Task < ApplicationRecord
+  default_scope -> { order(updated_at: :desc) }
+  has_one_attached :eyecatch
+
   validates :title, presence: true
 
   belongs_to :user

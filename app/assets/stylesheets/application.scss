@@ -1,5 +1,4 @@
 @import 'header';
-@import 'tabs';
 @import 'variables';
 @import 'card';
 @import 'buttons';
@@ -7,6 +6,7 @@
 @import 'boards';
 @import 'flash';
 @import 'tasks';
+@import 'common';
 
 html {
   word-spacing: 1px;
@@ -31,6 +31,10 @@ body {
   font-family: Avenir;
   font-size: 1em;
   color: $text-base-color;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {

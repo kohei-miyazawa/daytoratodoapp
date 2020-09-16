@@ -3,49 +3,49 @@ $board-color:#F4F4F4;
 /* Boardリンク */
 
 .task{
-  margin:30px 0;
-  height:161px;
+  margin:20px 0;
   background-color:$board-color;
   border:1px solid rgba(0,0,0,.1);
   border-radius:10px;
-  position: relative;
 
-  .task_title{
-    position: absolute;
-    top: 22px;
-    left: 17px;
-    font-family: Avenir;
+
+  &_image {
+    padding: 20px;
+    padding-bottom: 0;
+
+    img {
+      border-radius:10px;
+      height: 180px;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &_title{
     font-weight: bold;
-    color: black;
-    font-style: normal;
     font-size: 18px;
     line-height: 25px;
+    color: $text-base-color;
+    padding: 30px 20px 30px 20px;
   }
 
-  .task_content{
-    position: absolute;
-    top: 63px;
-    left:17px;
-    font-style: normal;
+  &_content{
     font-weight: normal;
     font-size: 14px;
-    color: black;
     line-height: 19px;
+    color: $text-base-color;
     opacity:0.4;
+    padding: 0 20px 30px 20px;
   }
 
-  .task_avatar{
-    position: absolute;
+  &_avatar{
     width: 30px;
     height: 30px;
-    left:10px;
-    top: 120px;
     border-radius:20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
   }
 }
-
-
-/* 新規追加リンク */
 
 .add_task{
   margin:30px 0;
