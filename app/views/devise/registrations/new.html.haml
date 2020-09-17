@@ -2,6 +2,10 @@
   %h2 Sign up
   = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
     = render "devise/shared/error_messages", resource: resource
+    %div
+      = f.label :avatar, 'Avatar'
+    %div
+      = f.file_field :avatar, class: 'file_field'
     .field
       = f.label :email
       %br/

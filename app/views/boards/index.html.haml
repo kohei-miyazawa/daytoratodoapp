@@ -16,7 +16,10 @@
         .board_description
           = board.description
         .board_icon
-          = image_tag 'default-avatar.png', class: 'board_avatar'
+          - if board.user.avatar.attached?
+            = image_tag board.user.avatar, class: 'board_avatar'
+          - else
+            = image_tag 'default-avatar.png', class: 'board_avatar'
   - if user_signed_in?
     .add_board
       = link_to("+ Add new board",new_board_path, {class: "add_board_content"})

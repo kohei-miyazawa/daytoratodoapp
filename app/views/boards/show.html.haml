@@ -12,7 +12,10 @@
           = task.content
         .task_icon
           .avatar
-            = image_tag 'default-avatar.png', class: 'task_avatar'
+            - if task.user.avatar.attached?
+              = image_tag task.user.avatar, class: 'task_avatar'
+            - else
+              = image_tag 'default-avatar.png', class: 'task_avatar'
           .task_comment
             .count
               = task.comments.count

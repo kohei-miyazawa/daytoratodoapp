@@ -21,7 +21,10 @@
       - @comments.each do |comment|
         .comment_items
           .comment_avatar
-            = image_tag 'default-avatar.png', class: 'comment_avatar'
+            - if comment.user.avatar.attached?
+              = image_tag comment.user.avatar, class: 'comment_avatar'
+            - else
+              = image_tag 'default-avatar.png', class: 'comment_avatar'
           .comment_sentence
             %p= comment.body
     - if user_signed_in?
