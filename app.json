@@ -1,0 +1,16 @@
+{
+  "name": "task app",
+  "description": "This is taskapp",
+  "keywords": [],
+  "website": "",
+  "repository": "https://github.com/kohei-miyazawa/daytoratodoapp",
+  "env": {},
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "buildpacks": [{
+    "url": "heroku/nodejs"
+  }, {
+    "url": "heroku/ruby"
+  }]
+}

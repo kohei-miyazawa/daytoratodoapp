@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'devise'
 gem 'hamlit'
+gem 'aws-sdk-s3', require: false
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -35,6 +36,7 @@ group :development, :test do
    gem 'pry-byebug'
   gem 'pry-doc'
   gem 'pry-rails'
+  gem 'dotenv-rails'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
