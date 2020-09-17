@@ -20,6 +20,7 @@
 #  fk_rails_...  (user_id => users.id)
 #
 class Comment < ApplicationRecord
+  attr_accessor :board_id
   validates :body, presence: true
 
   belongs_to :user
