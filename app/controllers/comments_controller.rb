@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!
+
   def new
     @comment = current_user.comments.build
     @task = Task.find_by(id: params[:task_id])
